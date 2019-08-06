@@ -1,0 +1,281 @@
+body,
+html {
+  font: 400 1em/1.85 "Lato", sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+button:focus{
+  outline: none;
+}
+
+#intro_page {
+  position: absolute;
+  display: none;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/thyreos.png");
+}
+
+#main_page {
+  display: none;
+}
+
+.navigation-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #282E34;
+  border-bottom-left-radius: 8px;
+  box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.36);
+  z-index: 99;
+}
+
+#arrow-top {
+  position: fixed;
+  display: none;
+  bottom: 6vh;
+  right: 4vw;
+  padding: 14px;
+  transition: padding 1s;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.36);
+  border: 2px solid #fff;
+  background-color: #282E34;
+  z-index: 99;
+}
+
+#arrow-top:hover {
+    background-color: #273647;
+    padding: 18px;
+    transition: padding 1s;
+  -webkit-animation: backgroundEffect 1s;
+  animation: backgroundEffect 1s; 
+}
+
+.text-section-1,
+.text-section-2,
+.text-section-3,
+.text-section-4,
+.text-section-5 {
+  padding: 4vh 0 8vh 0;
+  transition: padding 1s;
+}
+
+.text-section-2 p,
+.text-section-3 p,
+.text-section-4 p {
+  text-indent: 50px;
+}
+
+.text-section-1:hover,
+.text-section-2:hover,
+.text-section-3:hover,
+.text-section-4:hover,
+.text-section-5:hover {
+  padding: 8vh 0 20vh 0;
+  transition: padding 1s;
+}
+
+.image-section-1,
+.image-section-2,
+.image-section-3,
+.image-section-4,
+.image-section-5 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+}
+
+.caption {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px #000;
+  transition: letter-spacing 1s, font-size 1s;
+}
+
+.image-section-1 {
+  height: 100vh;
+  background-image: url("../images/img01.jpg");
+  opacity: 0.75;
+  transition: opacity 1s;
+}
+
+.image-section-1 .caption{
+  top: 40%;
+}
+
+.image-section-1:hover {
+  opacity: 1;
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+  transition: all 1s;
+}
+
+.image-section-2,
+.image-section-3,
+.image-section-4,
+.image-section-5 {
+  height: 60vh;
+  opacity: 0.75;
+  transition: height 1s, opacity 1s;
+}
+
+.image-section-2:hover,
+.image-section-3:hover,
+.image-section-4:hover,
+.image-section-5:hover {
+  height: 80vh;
+  opacity: 1;
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+  transition: all 1s;
+}
+
+.image-section-2 {
+  background-image: url("../images/img02.jpg");
+}
+
+.image-section-3 {
+  background-image: url("../images/img03.jpg");
+}
+
+.image-section-4 {
+  background-image: url("../images/img04.jpg");
+}
+
+.image-section-5 {
+  background-image: url("../images/img05.jpg");
+}
+
+.adjust-opacity-on-scroll {
+  opacity: 0;
+}
+
+.animate-on-scroll {
+  visibility: hidden;
+}
+
+.slide-animation {
+  animation-name: slide-animation;
+  -webkit-animation-name: slide-animation;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  visibility: visible;
+}
+
+.table tbody tr td, .table tbody tr th {
+  transition: padding 1s;
+}
+
+.table tbody tr:hover td, .table tbody tr:hover th {
+  padding: 1.25rem;
+  transition: padding 1s;
+  background-color: #273647;
+  -webkit-animation: backgroundEffect 1s;
+  animation: backgroundEffect 1s; 
+}
+
+.bg-dark-section {
+  background-color: #282E34;
+}
+
+.sep-logo a {
+  position: absolute;
+  left: -120px;
+  transition: left 1s;
+  padding-left: 2rem;
+  border-radius: 0 0.03em 0.03em 0;
+  top: 8%;
+}
+
+.sep-logo a:hover {
+  left: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+  height: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b5b5b5;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+@keyframes slide-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes slide-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes backgroundEffect {
+    from {background-color: #282E34;}
+    to {background-color: #273647;}
+}
+
+@keyframes backgroundEffect {
+    from {background-color: #282E34;}
+    to {background-color: #273647;}
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@media only screen and (max-width : 991px){
+  .navigation-menu {
+    width: 100%;
+    border-bottom-left-radius: 0;
+  }
+}
